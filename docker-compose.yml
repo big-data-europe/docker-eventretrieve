@@ -1,0 +1,16 @@
+version: '2'
+services:
+
+  eventretrieve:
+    image: bde2020/eventretrieve:1.0.0
+    container_name: eventretrieve
+    ports:
+      - "9999:8000"
+    links:
+      - semagrow_bde
+
+  semagrow_bde:
+    image: semagrow/semagrow-cassandra
+    container_name: semagrow_bde
+    volumes:
+      - <path_to_metadata.ttl>:/etc/default/semagrow
