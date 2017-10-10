@@ -22,7 +22,7 @@ RUN apt-get update \
 
 RUN pip install django \
  && mkdir /input \
- && git clone https://github.com/dimitrianos/BigDataEurope-EventDetectionService.git
+ && git clone -b poolparty https://github.com/big-data-europe/BigDataEurope-EventDetectionService.git
 
 EXPOSE 8000
 
