@@ -17,6 +17,7 @@ RUN apt-get update \
     curl \
     git \
     python-pip \
+    vim \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
